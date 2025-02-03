@@ -66,11 +66,12 @@ const page = () => {
       toast({
         title: 'Success',
         description: response.data.message,
-      })
-        if (router) {
-          router.replace(`/verify/${username}`)
-        }
-        setIsSubmitting(false)
+      });
+      if (router) {
+        router.replace(`/verify/${username}`)
+      }
+      setIsSubmitting(false)
+
     } catch (error) {
       console.error("Error signing up", error)
       const axiosError = error as AxiosError<ApiResponse>
