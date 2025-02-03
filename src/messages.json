@@ -1,0 +1,17 @@
+[
+    {
+        "title" : "Message from User1",
+        "content" : "Hello, I am User1",
+        "recieved" : "10 minutes ago"
+    },
+    {
+        "title" : "Message from User2",
+        "content" : "Hello, I am User2",
+        "recieved" : "20 minutes ago"
+    },
+    {
+        "title" : "Message from User3",
+        "content" : "Hello, I am User3",
+        "recieved" : "30 minutes ago"
+    }
+]
