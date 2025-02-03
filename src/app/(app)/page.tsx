@@ -47,7 +47,7 @@ export default function Home() {
                     <div>
                       <p>{message.content}</p>
                       <p className="text-xs text-muted-foreground">
-                        {message.recieved}
+                        {message.received}
                       </p>
                     </div>
                   </CardContent>

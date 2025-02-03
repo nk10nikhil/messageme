@@ -10,14 +10,13 @@ import { useRouter } from "next/compat/router"
 import { signUpSchema } from "@/schemas/signupSchema";
 import axios, {AxiosError} from "axios"
 import { ApiResponse } from "@/types/ApiResponse";
-import { set } from "mongoose";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Loader } from "lucide-react";
 
 
-const page = () => {
+const SignUpForm = () => {
   const router = useRouter()
   const [username, setUsername] = useState('')
   const [usernameMessage, setUsernameMessage] = useState('')
@@ -68,9 +67,9 @@ const page = () => {
         description: response.data.message,
       });
       if (router) {
-        router.replace(`/verify/${username}`)
+        router.replace(`/verify/${username}`);
       }
-      setIsSubmitting(false)
+      setIsSubmitting(false);
 
     } catch (error) {
       console.error("Error signing up", error)
@@ -170,7 +169,7 @@ return (
         <p>
           Already a member?{' '}
           <Link href="/sign-in" className="text-blue-600 hover:text-blue-800">
-            Sign Up
+            Sign In
           </Link>
         </p>
       </div>
@@ -179,4 +178,4 @@ return (
 );
 }
 
-export default page;
+export default SignUpForm;

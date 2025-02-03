@@ -14,7 +14,7 @@ import { signInSchema } from "@/schemas/signInSchema";
 import { signIn } from "next-auth/react";
 
 
-const page = () => {
+const SignInForm = () => {
 
   const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -109,7 +109,7 @@ return (
       <div className="text-center mt-4">
         <p>
           Already a member?{' '}
-          <Link href="/sign-in" className="text-blue-600 hover:text-blue-800">
+          <Link href="/sign-up" className="text-blue-600 hover:text-blue-800">
             Sign Up
           </Link>
         </p>
@@ -119,4 +119,4 @@ return (
 );
 }
 
-export default page;
+export default SignInForm;

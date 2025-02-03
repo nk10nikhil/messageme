@@ -3,6 +3,8 @@ import React from "react";
 import  Link  from 'next/link';
 import { useSession, signOut } from "next-auth/react";
 import {User} from "next-auth";
+import { Button } from "./ui/button";
+
 
 
 
@@ -22,14 +24,14 @@ const Navbar = () => {
                         <span className="mr-4">
                             Welcome, {user?.username || user?.email}
                         </span>
-                        <button className="w-full md:w-auto" onClick={() => signOut()}>Sign Out
-                        </button>
+                        <Button className="w-full md:w-auto" onClick={() => signOut()}>Sign Out
+                        </Button>
                         </>
                     ) : (
                         <Link href="/sign-in">
-                            <button className="w-full md:w-auto">
+                            <Button className="w-full md:w-auto">
                                 Login
-                            </button>
+                            </Button>
                         </Link>
                     )
                 }
